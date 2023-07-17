@@ -30,25 +30,40 @@
 }
 
 .questions {
-    &__result--item {
-        color: var(--black-color);
-        padding: 8px;
-        border: 1px solid #e6e6e6;
-        margin-bottom: 12px;
+    &__result {
+        max-width: 900px;
+        height: 100%;
+        padding-top: 100px;
+        margin: 0 auto;
 
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    &__result--title {
-        margin-bottom: 10px;
-    }
-
-    &__result--card {
-        margin-bottom: 30px;
+        &--card {
+            height: 100%;
+        }
+    
+        &--item {
+            color: var(--black-color);
+            padding: 8px;
+            border: 1px solid #e6e6e6;
+            margin-bottom: 12px;
+    
+            font-size: 16px;
+            font-weight: 400;
+        }
+    
+        &--title {
+            margin-bottom: 10px;
+        }
+    
+        &--card {
+            margin-bottom: 30px;
+        }
     }
 }
 
 .correct {
     border-color: #18d418;
+}
+
+.answered {
+    border-color: #ff0000;
 }
