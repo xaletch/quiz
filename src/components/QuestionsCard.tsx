@@ -17,21 +17,24 @@ export const QuestionsCard: React.FC<{ question: Question; step: number; setStep
         setStep(step + 1);
 
         if (index === question.correct) {
-            setCorrect(correct + 1)
-        }
+            setCorrect(correct + 1);
+        };
     };
-  
+
     return (
-    <div className='questions__card' style={{width: '300px', background: '#f6f6f6', margin: '0 auto', marginTop: '150px'}}>
-        <div className='questions__card--inner'>
-            <div className='questions__card--progress' style={{width: `${percentage}%`, height: '10px', background: '#123'}}></div>
-            <h2 className='questions__card--title'>{question.title}</h2>
-            <ul className='questions__card--list'>
-                {question.variants.map((variant, index) => (
-                    <li onClick={() => handleClick(index)} key={index}>{variant}</li>
-                ))}
-            </ul>
+        <div className='questions__container'>
+            <div className='questions__card'>
+                <div className='questions__card--progress' style={{width: `${percentage}%`}}></div>
+                <h2 className='questions__card--title'>{question.title}</h2>
+                <ul className='questions__card--list'>
+                    {question.variants.map((variant, index) => (
+                        <li className='questions__card--item' onClick={() => handleClick(index)} key={index}>{variant}</li>
+                    ))}
+                </ul>
+                <div className='questions__card--step'>
+                    <p className='questions__card--step--number'>{step} / 10</p>
+                </div>
+            </div>
         </div>
-    </div>
-  )
+    )
 }

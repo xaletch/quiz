@@ -1,0 +1,44 @@
+body {
+    padding: 0 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background: var(--page-background);
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --page-background: #F7F8F8;
+    --card-background: #fff;
+    --light-color: #fff;
+    --black-color: #111;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    user-select: none;
+}
